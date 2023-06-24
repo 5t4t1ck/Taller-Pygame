@@ -464,15 +464,24 @@ Lic. Diego Medardo Saavedra García Mg. Sc.
 <p>La Programación Orientada a Objetos es un paradigma de programación que se basa en la creación y manipulación de objetos. Los objetos son entidades que representan elementos del mundo real o abstracto, y se caracterizan por sus atributos y comportamientos.</p>
 <p>En Python, los objetos son instancias de clases, que son estructuras que definen la forma y el comportamiento de los objetos. Las clases actúan como plantillas o moldes a partir de los cuales se crean los objetos.</p>
 <p>A continuación, se muestra un ejemplo de creación de una clase “Jugador” en Python:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> Jugador:</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, puntos):</span>
+<span id="cb1-3"><a href="#cb1-3"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        <span class="va">self</span>.puntos <span class="op">=</span> puntos</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    </span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="kw">def</span> obtener_nombre(<span class="va">self</span>):</span>
+<span id="cb1-7"><a href="#cb1-7"></a>        <span class="cf">return</span> <span class="va">self</span>.nombre</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    </span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="kw">def</span> incrementar_puntos(<span class="va">self</span>, cantidad):</span>
+<span id="cb1-10"><a href="#cb1-10"></a>        <span class="va">self</span>.puntos <span class="op">+=</span> cantidad</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>En este ejemplo, la clase “Jugador” tiene dos atributos: “nombre” y “puntos”. También tiene dos métodos: “obtener_nombre” y “incrementar_puntos”. El método <strong>init</strong> es un método especial que se llama al crear una nueva instancia de la clase.</p>
 <p><strong>Práctica:</strong> Implementación de una instancia de la clase “Jugador” y llamadas a sus métodos</p>
 <p>A continuación, se muestra cómo se puede crear una instancia de la clase “Jugador” y llamar a sus métodos:</p>
-<div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>Juan
-10</code></pre>
-</div>
-</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>jugador1 <span class="op">=</span> Jugador(<span class="st">"Juan"</span>, <span class="dv">0</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(jugador1.obtener_nombre())  <span class="co"># Salida: Juan</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>jugador1.incrementar_puntos(<span class="dv">10</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(jugador1.puntos)  <span class="co"># Salida: 10</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>En este ejemplo, se crea una instancia de la clase “Jugador” llamada “jugador1” con el nombre “Juan” y 0 puntos. Luego se llama al método “obtener_nombre” para obtener el nombre del jugador y al método “incrementar_puntos” para incrementar los puntos en 10. Finalmente, se imprime el valor de los puntos, que ahora es 10.</p>
 <p>La Programación Orientada a Objetos proporciona una forma estructurada y modular de organizar el código, lo que facilita el desarrollo y mantenimiento de proyectos más grandes, como los videojuegos.</p>
 <p>En la siguiente diapositiva, se realizará una práctica para reforzar los conceptos aprendidos hasta ahora.</p>
@@ -494,18 +503,18 @@ Lic. Diego Medardo Saavedra García Mg. Sc.
 <p>En esta unidad, se explorará la estructura básica de un videojuego desarrollado utilizando Programación Orientada a Objetos (POO) en Python.</p>
 <p><strong>Ejemplo:</strong> Creación de una clase “Juego” con métodos para inicializar y ejecutar el juego</p>
 <p>A continuación, se muestra un ejemplo de cómo se puede crear una clase “Juego” que contenga los métodos necesarios para inicializar y ejecutar el juego:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> Juego:</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb2-3"><a href="#cb2-3"></a>        <span class="co"># Inicialización del juego</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>        </span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="kw">def</span> iniciar(<span class="va">self</span>):</span>
-<span id="cb2-6"><a href="#cb2-6"></a>        <span class="co"># Lógica para iniciar el juego</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>        </span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="kw">def</span> ejecutar(<span class="va">self</span>):</span>
-<span id="cb2-9"><a href="#cb2-9"></a>        <span class="co"># Lógica para ejecutar el juego</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>        </span>
-<span id="cb2-11"><a href="#cb2-11"></a>    <span class="kw">def</span> finalizar(<span class="va">self</span>):</span>
-<span id="cb2-12"><a href="#cb2-12"></a>        <span class="co"># Lógica para finalizar el juego</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> Juego:</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb3-3"><a href="#cb3-3"></a>        <span class="co"># Inicialización del juego</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>        </span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="kw">def</span> iniciar(<span class="va">self</span>):</span>
+<span id="cb3-6"><a href="#cb3-6"></a>        <span class="co"># Lógica para iniciar el juego</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>        </span>
+<span id="cb3-8"><a href="#cb3-8"></a>    <span class="kw">def</span> ejecutar(<span class="va">self</span>):</span>
+<span id="cb3-9"><a href="#cb3-9"></a>        <span class="co"># Lógica para ejecutar el juego</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>        </span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="kw">def</span> finalizar(<span class="va">self</span>):</span>
+<span id="cb3-12"><a href="#cb3-12"></a>        <span class="co"># Lógica para finalizar el juego</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>En este ejemplo, la clase “Juego” tiene los métodos <strong>init</strong>, iniciar, ejecutar y finalizar. El método <strong>init</strong> se utiliza para inicializar el juego, mientras que los otros métodos contienen la lógica principal para iniciar, ejecutar y finalizar el juego, respectivamente.</p>
 <p><strong>Práctica:</strong> Desarrollo de un juego sencillo utilizando la estructura básica</p>
 <p>En esta práctica, se te pedirá desarrollar un juego sencillo utilizando la estructura básica de la clase “Juego” presentada anteriormente. Sigue las instrucciones a continuación:</p>
@@ -525,26 +534,26 @@ Lic. Diego Medardo Saavedra García Mg. Sc.
 <p>En el desarrollo de un videojuego, es importante implementar diversas mecánicas que le brinden interactividad y diversión al jugador. En esta sección, exploraremos cómo implementar mecánicas de juego utilizando POO en Python.</p>
 <p><strong>Ejemplo:</strong> Creación de clases para enemigos, obstáculos y objetos recolectables</p>
 <p>Para ilustrar la implementación de mecánicas de juego, se crearán las siguientes clases: “Enemigo”, “Obstáculo” y “ObjetoRecolectable”.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> Enemigo:</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb3-3"><a href="#cb3-3"></a>        <span class="co"># Inicialización del enemigo</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>        </span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="kw">def</span> mover(<span class="va">self</span>):</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        <span class="co"># Lógica para mover al enemigo</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>        </span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="kw">class</span> Obstáculo:</span>
-<span id="cb3-9"><a href="#cb3-9"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb3-10"><a href="#cb3-10"></a>        <span class="co"># Inicialización del obstáculo</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a>        </span>
-<span id="cb3-12"><a href="#cb3-12"></a>    <span class="kw">def</span> colisionar(<span class="va">self</span>):</span>
-<span id="cb3-13"><a href="#cb3-13"></a>        <span class="co"># Lógica para manejar la colisión del obstáculo</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>        </span>
-<span id="cb3-15"><a href="#cb3-15"></a><span class="kw">class</span> ObjetoRecolectable:</span>
-<span id="cb3-16"><a href="#cb3-16"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb3-17"><a href="#cb3-17"></a>        <span class="co"># Inicialización del objeto recolectable</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a>        </span>
-<span id="cb3-19"><a href="#cb3-19"></a>    <span class="kw">def</span> recolectar(<span class="va">self</span>):</span>
-<span id="cb3-20"><a href="#cb3-20"></a>        <span class="co"># Lógica para recolectar el objeto</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> Enemigo:</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb4-3"><a href="#cb4-3"></a>        <span class="co"># Inicialización del enemigo</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>        </span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="kw">def</span> mover(<span class="va">self</span>):</span>
+<span id="cb4-6"><a href="#cb4-6"></a>        <span class="co"># Lógica para mover al enemigo</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>        </span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="kw">class</span> Obstáculo:</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb4-10"><a href="#cb4-10"></a>        <span class="co"># Inicialización del obstáculo</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>        </span>
+<span id="cb4-12"><a href="#cb4-12"></a>    <span class="kw">def</span> colisionar(<span class="va">self</span>):</span>
+<span id="cb4-13"><a href="#cb4-13"></a>        <span class="co"># Lógica para manejar la colisión del obstáculo</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>        </span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="kw">class</span> ObjetoRecolectable:</span>
+<span id="cb4-16"><a href="#cb4-16"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb4-17"><a href="#cb4-17"></a>        <span class="co"># Inicialización del objeto recolectable</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a>        </span>
+<span id="cb4-19"><a href="#cb4-19"></a>    <span class="kw">def</span> recolectar(<span class="va">self</span>):</span>
+<span id="cb4-20"><a href="#cb4-20"></a>        <span class="co"># Lógica para recolectar el objeto</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>En este ejemplo, cada clase tiene un método <strong>init</strong> para la inicialización y métodos adicionales para implementar la lógica específica de cada elemento del juego. Por ejemplo, el enemigo tiene un método mover para definir cómo se mueve, el obstáculo tiene un método colisionar para manejar las colisiones y el objeto recolectable tiene un método recolectar para realizar la recolección.</p>
 <p><strong>Práctica:</strong> Incorporación de mecánicas de juego al proyecto del videojuego</p>
 <p>En esta práctica, se te pedirá que incorpores las mecánicas de juego implementadas en el ejemplo anterior a tu proyecto del videojuego desarrollado en la práctica anterior. Sigue las instrucciones a continuación:</p>
@@ -573,59 +582,59 @@ Lic. Diego Medardo Saavedra García Mg. Sc.
 <h3 id="instalación-de-pygame.">Instalación de Pygame.</h3>
 <p>Para instalar Pygame, se puede utilizar el administrador de paquetes pip en Python.</p>
 <p>Ejecuta el siguiente comando en tu terminal o línea de comandos:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>pip install pygame</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>pip install pygame</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Una vez instalado, podrás importar y utilizar Pygame en tus proyectos de videojuegos.</p>
 <h3 id="elementos-básicos-de-pygame">Elementos básicos de Pygame</h3>
 <p>En esta sección, aprenderemos los elementos básicos necesarios para iniciar el desarrollo de un videojuego con Pygame.</p>
 <h3 id="creación-de-una-ventana-de-juego.">Creación de una ventana de juego.</h3>
 <p>Pygame proporciona una función para crear una ventana de juego en la cual se mostrará nuestro juego.</p>
 <p>Utilizaremos la función pygame.display.set_mode() para especificar el tamaño de la ventana y otros parámetros.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> pygame</span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Inicializar Pygame</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>pygame.init()</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co"># Crear una ventana de juego</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>ventana <span class="op">=</span> pygame.display.set_mode((<span class="dv">800</span>, <span class="dv">600</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<h3 id="carga-y-visualización-de-imágenes.">Carga y visualización de imágenes.</h3>
-<p>Pygame permite cargar y mostrar imágenes en nuestro juego. Utilizaremos la función pygame.image.load() para cargar una imagen y la función ventana.blit() para mostrarla en la ventana de juego.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pygame</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Cargar una imagen</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>imagen <span class="op">=</span> pygame.image.load(<span class="st">"imagen.png"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Inicializar Pygame</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>pygame.init()</span>
 <span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Mostrar la imagen en la ventana de juego</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a>ventana.blit(imagen, (x, y))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Captura de eventos del teclado y del ratón. Pygame nos permite capturar eventos del teclado y del ratón para realizar acciones en nuestro juego. Utilizaremos un bucle principal para escuchar y manejar los eventos.</p>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Crear una ventana de juego</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>ventana <span class="op">=</span> pygame.display.set_mode((<span class="dv">800</span>, <span class="dv">600</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 id="carga-y-visualización-de-imágenes.">Carga y visualización de imágenes.</h3>
+<p>Pygame permite cargar y mostrar imágenes en nuestro juego. Utilizaremos la función pygame.image.load() para cargar una imagen y la función ventana.blit() para mostrarla en la ventana de juego.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> pygame</span>
 <span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="co"># Bucle principal del juego</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="cf">for</span> evento <span class="kw">in</span> pygame.event.get():</span>
-<span id="cb7-6"><a href="#cb7-6"></a>        <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.KEYDOWN:</span>
-<span id="cb7-7"><a href="#cb7-7"></a>            <span class="cf">if</span> evento.key <span class="op">==</span> pygame.K_SPACE:</span>
-<span id="cb7-8"><a href="#cb7-8"></a>                <span class="co"># Acción al presionar la tecla espacio</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a>                <span class="cf">pass</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a>        <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONDOWN:</span>
-<span id="cb7-12"><a href="#cb7-12"></a>            <span class="cf">if</span> evento.button <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb7-13"><a href="#cb7-13"></a>                <span class="co"># Acción al hacer clic con el botón izquierdo del ratón</span></span>
-<span id="cb7-14"><a href="#cb7-14"></a>                <span class="cf">pass</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<h3 id="actualización-del-juego-en-un-bucle-principal.">Actualización del juego en un bucle principal.</h3>
-<p>Para que nuestro juego se mantenga actualizado, utilizaremos un bucle principal que se ejecutará continuamente.</p>
-<p>En cada iteración del bucle, actualizaremos el estado del juego y dibujaremos los elementos en la ventana.</p>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co"># Cargar una imagen</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>imagen <span class="op">=</span> pygame.image.load(<span class="st">"imagen.png"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co"># Mostrar la imagen en la ventana de juego</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>ventana.blit(imagen, (x, y))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Captura de eventos del teclado y del ratón. Pygame nos permite capturar eventos del teclado y del ratón para realizar acciones en nuestro juego. Utilizaremos un bucle principal para escuchar y manejar los eventos.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> pygame</span>
 <span id="cb8-2"><a href="#cb8-2"></a></span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="co"># Bucle principal del juego</span></span>
 <span id="cb8-4"><a href="#cb8-4"></a><span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb8-5"><a href="#cb8-5"></a>    <span class="co"># Actualizar el estado del juego</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a>    <span class="co"># ...</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a>    <span class="co"># Dibujar elementos en la ventana</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a>    <span class="co"># ...</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>    <span class="cf">for</span> evento <span class="kw">in</span> pygame.event.get():</span>
+<span id="cb8-6"><a href="#cb8-6"></a>        <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.KEYDOWN:</span>
+<span id="cb8-7"><a href="#cb8-7"></a>            <span class="cf">if</span> evento.key <span class="op">==</span> pygame.K_SPACE:</span>
+<span id="cb8-8"><a href="#cb8-8"></a>                <span class="co"># Acción al presionar la tecla espacio</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>                <span class="cf">pass</span></span>
 <span id="cb8-10"><a href="#cb8-10"></a></span>
-<span id="cb8-11"><a href="#cb8-11"></a>    <span class="co"># Actualizar la ventana</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a>    pygame.display.update()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-11"><a href="#cb8-11"></a>        <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONDOWN:</span>
+<span id="cb8-12"><a href="#cb8-12"></a>            <span class="cf">if</span> evento.button <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb8-13"><a href="#cb8-13"></a>                <span class="co"># Acción al hacer clic con el botón izquierdo del ratón</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a>                <span class="cf">pass</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 id="actualización-del-juego-en-un-bucle-principal.">Actualización del juego en un bucle principal.</h3>
+<p>Para que nuestro juego se mantenga actualizado, utilizaremos un bucle principal que se ejecutará continuamente.</p>
+<p>En cada iteración del bucle, actualizaremos el estado del juego y dibujaremos los elementos en la ventana.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> pygame</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co"># Bucle principal del juego</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="co"># Actualizar el estado del juego</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="co"># ...</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="co"># Dibujar elementos en la ventana</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>    <span class="co"># ...</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="co"># Actualizar la ventana</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a>    pygame.display.update()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="sprites-y-animaciones">Sprites y animaciones</h3>
 <p>En esta sección, aprenderemos sobre los sprites en los juegos y cómo animarlos utilizando Pygame.</p>
 <h3 id="concepto-de-sprites-en-los-juegos.">Concepto de sprites en los juegos.</h3>
@@ -634,128 +643,128 @@ Lic. Diego Medardo Saavedra García Mg. Sc.
 <h3 id="creación-de-sprites-utilizando-imágenes.">Creación de sprites utilizando imágenes.</h3>
 <p>Para crear un sprite en Pygame, primero cargamos una imagen y la asignamos a una variable.</p>
 <p>Luego, utilizamos la clase pygame.sprite.Sprite para crear un sprite a partir de la imagen cargada.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> pygame</span>
-<span id="cb9-2"><a href="#cb9-2"></a></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="kw">class</span> MiSprite(pygame.sprite.Sprite):</span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, imagen):</span>
-<span id="cb9-5"><a href="#cb9-5"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
-<span id="cb9-6"><a href="#cb9-6"></a>        <span class="va">self</span>.image <span class="op">=</span> imagen</span>
-<span id="cb9-7"><a href="#cb9-7"></a>        <span class="va">self</span>.rect <span class="op">=</span> <span class="va">self</span>.image.get_rect()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<h3 id="animación-de-sprites.">Animación de sprites.</h3>
-<p>Para animar un sprite, podemos utilizar una secuencia de imágenes que se mostrarán en rápida sucesión.</p>
-<p>Utilizaremos una lista de imágenes y un temporizador para cambiar la imagen que se muestra en cada fotograma.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> pygame</span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="kw">class</span> MiSprite(pygame.sprite.Sprite):</span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, imagenes):</span>
+<span id="cb10-4"><a href="#cb10-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, imagen):</span>
 <span id="cb10-5"><a href="#cb10-5"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
-<span id="cb10-6"><a href="#cb10-6"></a>        <span class="va">self</span>.imagenes <span class="op">=</span> imagenes</span>
-<span id="cb10-7"><a href="#cb10-7"></a>        <span class="va">self</span>.indice <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb10-8"><a href="#cb10-8"></a>        <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagenes[<span class="va">self</span>.indice]</span>
-<span id="cb10-9"><a href="#cb10-9"></a>        <span class="va">self</span>.rect <span class="op">=</span> <span class="va">self</span>.image.get_rect()</span>
-<span id="cb10-10"><a href="#cb10-10"></a></span>
-<span id="cb10-11"><a href="#cb10-11"></a>    <span class="kw">def</span> animar(<span class="va">self</span>):</span>
-<span id="cb10-12"><a href="#cb10-12"></a>        <span class="va">self</span>.indice <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb10-13"><a href="#cb10-13"></a>        <span class="cf">if</span> <span class="va">self</span>.indice <span class="op">&gt;=</span> <span class="bu">len</span>(<span class="va">self</span>.imagenes):</span>
-<span id="cb10-14"><a href="#cb10-14"></a>            <span class="va">self</span>.indice <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb10-15"><a href="#cb10-15"></a>        <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagenes[<span class="va">self</span>.indice]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-6"><a href="#cb10-6"></a>        <span class="va">self</span>.image <span class="op">=</span> imagen</span>
+<span id="cb10-7"><a href="#cb10-7"></a>        <span class="va">self</span>.rect <span class="op">=</span> <span class="va">self</span>.image.get_rect()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 id="animación-de-sprites.">Animación de sprites.</h3>
+<p>Para animar un sprite, podemos utilizar una secuencia de imágenes que se mostrarán en rápida sucesión.</p>
+<p>Utilizaremos una lista de imágenes y un temporizador para cambiar la imagen que se muestra en cada fotograma.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> pygame</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="kw">class</span> MiSprite(pygame.sprite.Sprite):</span>
+<span id="cb11-4"><a href="#cb11-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, imagenes):</span>
+<span id="cb11-5"><a href="#cb11-5"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb11-6"><a href="#cb11-6"></a>        <span class="va">self</span>.imagenes <span class="op">=</span> imagenes</span>
+<span id="cb11-7"><a href="#cb11-7"></a>        <span class="va">self</span>.indice <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a>        <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagenes[<span class="va">self</span>.indice]</span>
+<span id="cb11-9"><a href="#cb11-9"></a>        <span class="va">self</span>.rect <span class="op">=</span> <span class="va">self</span>.image.get_rect()</span>
+<span id="cb11-10"><a href="#cb11-10"></a></span>
+<span id="cb11-11"><a href="#cb11-11"></a>    <span class="kw">def</span> animar(<span class="va">self</span>):</span>
+<span id="cb11-12"><a href="#cb11-12"></a>        <span class="va">self</span>.indice <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a>        <span class="cf">if</span> <span class="va">self</span>.indice <span class="op">&gt;=</span> <span class="bu">len</span>(<span class="va">self</span>.imagenes):</span>
+<span id="cb11-14"><a href="#cb11-14"></a>            <span class="va">self</span>.indice <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-15"><a href="#cb11-15"></a>        <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagenes[<span class="va">self</span>.indice]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="colisiones-entre-sprites.">Colisiones entre sprites.</h3>
 <p>En los juegos, es común necesitar detectar colisiones entre sprites para manejar interacciones y eventos.</p>
 <p>Pygame proporciona métodos para detectar colisiones entre rectángulos que rodean los sprites.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> pygame</span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a>sprite1 <span class="op">=</span> pygame.sprite.Sprite()</span>
-<span id="cb11-4"><a href="#cb11-4"></a>sprite1.rect <span class="op">=</span> pygame.Rect(<span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">50</span>, <span class="dv">50</span>)</span>
-<span id="cb11-5"><a href="#cb11-5"></a></span>
-<span id="cb11-6"><a href="#cb11-6"></a>sprite2 <span class="op">=</span> pygame.sprite.Sprite()</span>
-<span id="cb11-7"><a href="#cb11-7"></a>sprite2.rect <span class="op">=</span> pygame.Rect(<span class="dv">200</span>, <span class="dv">200</span>, <span class="dv">50</span>, <span class="dv">50</span>)</span>
-<span id="cb11-8"><a href="#cb11-8"></a></span>
-<span id="cb11-9"><a href="#cb11-9"></a><span class="cf">if</span> pygame.sprite.collide_rect(sprite1, sprite2):</span>
-<span id="cb11-10"><a href="#cb11-10"></a>    <span class="co"># Acción al producirse una colisión entre los sprites</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a>    <span class="cf">pass</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> pygame</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a>sprite1 <span class="op">=</span> pygame.sprite.Sprite()</span>
+<span id="cb12-4"><a href="#cb12-4"></a>sprite1.rect <span class="op">=</span> pygame.Rect(<span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">50</span>, <span class="dv">50</span>)</span>
+<span id="cb12-5"><a href="#cb12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6"></a>sprite2 <span class="op">=</span> pygame.sprite.Sprite()</span>
+<span id="cb12-7"><a href="#cb12-7"></a>sprite2.rect <span class="op">=</span> pygame.Rect(<span class="dv">200</span>, <span class="dv">200</span>, <span class="dv">50</span>, <span class="dv">50</span>)</span>
+<span id="cb12-8"><a href="#cb12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="cf">if</span> pygame.sprite.collide_rect(sprite1, sprite2):</span>
+<span id="cb12-10"><a href="#cb12-10"></a>    <span class="co"># Acción al producirse una colisión entre los sprites</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="cf">pass</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="sonido-y-música">Sonido y música</h3>
 <p>En esta sección, exploraremos cómo incorporar efectos de sonido y música de fondo en nuestros juegos con Pygame.</p>
 <h3 id="incorporación-de-efectos-de-sonido.">Incorporación de efectos de sonido.</h3>
 <p>Pygame nos permite cargar y reproducir efectos de sonido en nuestro juego.</p>
 <p>Utilizaremos la función pygame.mixer.Sound() para cargar un efecto de sonido y el método play() para reproducirlo.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> pygame</span>
-<span id="cb12-2"><a href="#cb12-2"></a></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="co"># Cargar un efecto de sonido</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>efecto_sonido <span class="op">=</span> pygame.mixer.Sound(<span class="st">"sonido.wav"</span>)</span>
-<span id="cb12-5"><a href="#cb12-5"></a></span>
-<span id="cb12-6"><a href="#cb12-6"></a><span class="co"># Reproducir el efecto de sonido</span></span>
-<span id="cb12-7"><a href="#cb12-7"></a>efecto_sonido.play()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> pygame</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co"># Cargar un efecto de sonido</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>efecto_sonido <span class="op">=</span> pygame.mixer.Sound(<span class="st">"sonido.wav"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5"></a></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="co"># Reproducir el efecto de sonido</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a>efecto_sonido.play()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="reproducción-de-música-de-fondo.">Reproducción de música de fondo.</h3>
 <p>Pygame también nos permite cargar y reproducir música de fondo en nuestro juego.</p>
 <p>Utilizaremos la función pygame.mixer.music.load() para cargar una canción y el método pygame.mixer.music.play() para reproducirla.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> pygame</span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="co"># Cargar una canción</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>pygame.mixer.music.load(<span class="st">"cancion.mp3"</span>)</span>
-<span id="cb13-5"><a href="#cb13-5"></a></span>
-<span id="cb13-6"><a href="#cb13-6"></a><span class="co"># Reproducir la canción en bucle</span></span>
-<span id="cb13-7"><a href="#cb13-7"></a>pygame.mixer.music.play(<span class="op">-</span><span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> pygame</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="co"># Cargar una canción</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>pygame.mixer.music.load(<span class="st">"cancion.mp3"</span>)</span>
+<span id="cb14-5"><a href="#cb14-5"></a></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="co"># Reproducir la canción en bucle</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a>pygame.mixer.music.play(<span class="op">-</span><span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="control-de-volumen-y-reproducción.">Control de volumen y reproducción.</h3>
 <p>Pygame nos brinda la capacidad de controlar el volumen de los efectos de sonido y la música de fondo.</p>
 <p>Utilizaremos las funciones pygame.mixer.Sound.set_volume() y pygame.mixer.music.set_volume() para ajustar el volumen.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> pygame</span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="co"># Ajustar el volumen de un efecto de sonido</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a>efecto_sonido.set_volume(<span class="fl">0.5</span>)</span>
-<span id="cb14-5"><a href="#cb14-5"></a></span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="co"># Ajustar el volumen de la música de fondo</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a>pygame.mixer.music.set_volume(<span class="fl">0.3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> pygame</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="co"># Ajustar el volumen de un efecto de sonido</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>efecto_sonido.set_volume(<span class="fl">0.5</span>)</span>
+<span id="cb15-5"><a href="#cb15-5"></a></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="co"># Ajustar el volumen de la música de fondo</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>pygame.mixer.music.set_volume(<span class="fl">0.3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="interfaz-de-usuario-y-menús">Interfaz de usuario y menús</h3>
 <p>En esta sección, aprenderemos a crear elementos interactivos y menús para mejorar la experiencia del usuario en nuestros juegos.</p>
 <h3 id="creación-de-botones-y-elementos-interactivos.">Creación de botones y elementos interactivos.</h3>
 <p>Pygame nos permite crear botones y otros elementos interactivos utilizando imágenes y eventos del usuario.</p>
 <p>Utilizaremos rectángulos para definir las áreas interactivas y la detección de eventos del ratón para manejar las interacciones.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">import</span> pygame</span>
-<span id="cb15-2"><a href="#cb15-2"></a></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="kw">class</span> Boton(pygame.sprite.Sprite):</span>
-<span id="cb15-4"><a href="#cb15-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, imagen_normal, imagen_clic):</span>
-<span id="cb15-5"><a href="#cb15-5"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
-<span id="cb15-6"><a href="#cb15-6"></a>        <span class="va">self</span>.imagen_normal <span class="op">=</span> imagen_normal</span>
-<span id="cb15-7"><a href="#cb15-7"></a>        <span class="va">self</span>.imagen_clic <span class="op">=</span> imagen_clic</span>
-<span id="cb15-8"><a href="#cb15-8"></a>        <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagen_normal</span>
-<span id="cb15-9"><a href="#cb15-9"></a>        <span class="va">self</span>.rect <span class="op">=</span> <span class="va">self</span>.image.get_rect()</span>
-<span id="cb15-10"><a href="#cb15-10"></a></span>
-<span id="cb15-11"><a href="#cb15-11"></a>    <span class="kw">def</span> manejar_evento(<span class="va">self</span>, evento):</span>
-<span id="cb15-12"><a href="#cb15-12"></a>        <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONDOWN:</span>
-<span id="cb15-13"><a href="#cb15-13"></a>            <span class="cf">if</span> <span class="va">self</span>.rect.collidepoint(evento.pos):</span>
-<span id="cb15-14"><a href="#cb15-14"></a>                <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagen_clic</span>
-<span id="cb15-15"><a href="#cb15-15"></a>        <span class="cf">elif</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONUP:</span>
-<span id="cb15-16"><a href="#cb15-16"></a>            <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagen_normal</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> pygame</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="kw">class</span> Boton(pygame.sprite.Sprite):</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, imagen_normal, imagen_clic):</span>
+<span id="cb16-5"><a href="#cb16-5"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb16-6"><a href="#cb16-6"></a>        <span class="va">self</span>.imagen_normal <span class="op">=</span> imagen_normal</span>
+<span id="cb16-7"><a href="#cb16-7"></a>        <span class="va">self</span>.imagen_clic <span class="op">=</span> imagen_clic</span>
+<span id="cb16-8"><a href="#cb16-8"></a>        <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagen_normal</span>
+<span id="cb16-9"><a href="#cb16-9"></a>        <span class="va">self</span>.rect <span class="op">=</span> <span class="va">self</span>.image.get_rect()</span>
+<span id="cb16-10"><a href="#cb16-10"></a></span>
+<span id="cb16-11"><a href="#cb16-11"></a>    <span class="kw">def</span> manejar_evento(<span class="va">self</span>, evento):</span>
+<span id="cb16-12"><a href="#cb16-12"></a>        <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONDOWN:</span>
+<span id="cb16-13"><a href="#cb16-13"></a>            <span class="cf">if</span> <span class="va">self</span>.rect.collidepoint(evento.pos):</span>
+<span id="cb16-14"><a href="#cb16-14"></a>                <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagen_clic</span>
+<span id="cb16-15"><a href="#cb16-15"></a>        <span class="cf">elif</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.MOUSEBUTTONUP:</span>
+<span id="cb16-16"><a href="#cb16-16"></a>            <span class="va">self</span>.image <span class="op">=</span> <span class="va">self</span>.imagen_normal</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="implementación-de-menús-y-pantallas-de-inicio.">Implementación de menús y pantallas de inicio.</h3>
 <p>Pygame nos permite crear menús y pantallas de inicio para dar la bienvenida al jugador y permitir la navegación entre diferentes secciones del juego.</p>
 <p>Utilizaremos diferentes superficies y elementos gráficos para diseñar las pantallas de manera atractiva y fácil de usar.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> pygame</span>
-<span id="cb16-2"><a href="#cb16-2"></a></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="co"># Pantalla de inicio</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="kw">def</span> pantalla_inicio():</span>
-<span id="cb16-5"><a href="#cb16-5"></a>    <span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb16-6"><a href="#cb16-6"></a>        <span class="cf">for</span> evento <span class="kw">in</span> pygame.event.get():</span>
-<span id="cb16-7"><a href="#cb16-7"></a>            <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.KEYDOWN:</span>
-<span id="cb16-8"><a href="#cb16-8"></a>                <span class="cf">if</span> evento.key <span class="op">==</span> pygame.K_SPACE:</span>
-<span id="cb16-9"><a href="#cb16-9"></a>                    <span class="co"># Iniciar el juego</span></span>
-<span id="cb16-10"><a href="#cb16-10"></a>                    <span class="cf">pass</span></span>
-<span id="cb16-11"><a href="#cb16-11"></a></span>
-<span id="cb16-12"><a href="#cb16-12"></a>        <span class="co"># Dibujar elementos en la pantalla de inicio</span></span>
-<span id="cb16-13"><a href="#cb16-13"></a>        <span class="co"># ...</span></span>
-<span id="cb16-14"><a href="#cb16-14"></a></span>
-<span id="cb16-15"><a href="#cb16-15"></a>        pygame.display.update()</span>
-<span id="cb16-16"><a href="#cb16-16"></a></span>
-<span id="cb16-17"><a href="#cb16-17"></a><span class="co"># Juego principal</span></span>
-<span id="cb16-18"><a href="#cb16-18"></a><span class="kw">def</span> juego_principal():</span>
-<span id="cb16-19"><a href="#cb16-19"></a>    <span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb16-20"><a href="#cb16-20"></a>        <span class="cf">for</span> evento <span class="kw">in</span> pygame.event.get():</span>
-<span id="cb16-21"><a href="#cb16-21"></a>            <span class="co"># Capturar eventos del juego principal</span></span>
-<span id="cb16-22"><a href="#cb16-22"></a>            <span class="co"># ...</span></span>
-<span id="cb16-23"><a href="#cb16-23"></a></span>
-<span id="cb16-24"><a href="#cb16-24"></a>        <span class="co"># Actualizar y dibujar elementos del juego principal</span></span>
-<span id="cb16-25"><a href="#cb16-25"></a>        <span class="co"># ...</span></span>
-<span id="cb16-26"><a href="#cb16-26"></a></span>
-<span id="cb16-27"><a href="#cb16-27"></a>        pygame.display.update()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="im">import</span> pygame</span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co"># Pantalla de inicio</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="kw">def</span> pantalla_inicio():</span>
+<span id="cb17-5"><a href="#cb17-5"></a>    <span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb17-6"><a href="#cb17-6"></a>        <span class="cf">for</span> evento <span class="kw">in</span> pygame.event.get():</span>
+<span id="cb17-7"><a href="#cb17-7"></a>            <span class="cf">if</span> evento.<span class="bu">type</span> <span class="op">==</span> pygame.KEYDOWN:</span>
+<span id="cb17-8"><a href="#cb17-8"></a>                <span class="cf">if</span> evento.key <span class="op">==</span> pygame.K_SPACE:</span>
+<span id="cb17-9"><a href="#cb17-9"></a>                    <span class="co"># Iniciar el juego</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a>                    <span class="cf">pass</span></span>
+<span id="cb17-11"><a href="#cb17-11"></a></span>
+<span id="cb17-12"><a href="#cb17-12"></a>        <span class="co"># Dibujar elementos en la pantalla de inicio</span></span>
+<span id="cb17-13"><a href="#cb17-13"></a>        <span class="co"># ...</span></span>
+<span id="cb17-14"><a href="#cb17-14"></a></span>
+<span id="cb17-15"><a href="#cb17-15"></a>        pygame.display.update()</span>
+<span id="cb17-16"><a href="#cb17-16"></a></span>
+<span id="cb17-17"><a href="#cb17-17"></a><span class="co"># Juego principal</span></span>
+<span id="cb17-18"><a href="#cb17-18"></a><span class="kw">def</span> juego_principal():</span>
+<span id="cb17-19"><a href="#cb17-19"></a>    <span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb17-20"><a href="#cb17-20"></a>        <span class="cf">for</span> evento <span class="kw">in</span> pygame.event.get():</span>
+<span id="cb17-21"><a href="#cb17-21"></a>            <span class="co"># Capturar eventos del juego principal</span></span>
+<span id="cb17-22"><a href="#cb17-22"></a>            <span class="co"># ...</span></span>
+<span id="cb17-23"><a href="#cb17-23"></a></span>
+<span id="cb17-24"><a href="#cb17-24"></a>        <span class="co"># Actualizar y dibujar elementos del juego principal</span></span>
+<span id="cb17-25"><a href="#cb17-25"></a>        <span class="co"># ...</span></span>
+<span id="cb17-26"><a href="#cb17-26"></a></span>
+<span id="cb17-27"><a href="#cb17-27"></a>        pygame.display.update()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
 <section id="práctica-desarrollo-de-un-juego-completo-con-pygame" class="title-slide slide level1 center">
