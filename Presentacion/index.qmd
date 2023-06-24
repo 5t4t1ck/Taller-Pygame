@@ -55,8 +55,7 @@ En Python, los objetos son instancias de clases, que son estructuras que definen
 
 A continuación, se muestra un ejemplo de creación de una clase "Jugador" en Python:
 
-```{python}
-
+``` python
 class Jugador:
     def __init__(self, nombre, puntos):
         self.nombre = nombre
@@ -75,8 +74,7 @@ En este ejemplo, la clase "Jugador" tiene dos atributos: "nombre" y "puntos". Ta
 
 A continuación, se muestra cómo se puede crear una instancia de la clase "Jugador" y llamar a sus métodos:
 
-```{python}
-
+``` python
 jugador1 = Jugador("Juan", 0)
 print(jugador1.obtener_nombre())  # Salida: Juan
 
