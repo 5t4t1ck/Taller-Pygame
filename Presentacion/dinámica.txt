@@ -1,0 +1,14 @@
+Una dinámica que se puede realizar con estudiantes universitarios para ayudarles a comprender el concepto de tablas de verdad es la siguiente:
+
+    Formar equipos de 3 a 4 estudiantes.
+    Dar a cada equipo una serie de proposiciones para analizar y construir su tabla de verdad correspondiente.
+    Cada equipo tendrá un tiempo límite de 15 minutos para construir su tabla de verdad.
+    Al finalizar el tiempo, cada equipo presentará su tabla de verdad y explicará cómo la construyó.
+    El resto de los equipos pueden hacer preguntas o sugerencias.
+    Se repite el proceso con diferentes proposiciones y se sigue el mismo procedimiento.
+
+Para hacerlo más interesante y desafiante, se pueden dar proposiciones más complejas o incluso algunos argumentos para que los estudiantes construyan las tablas de verdad correspondientes y determinen si son válidos o no.
+
+Además, se puede fomentar la competitividad entre los equipos, otorgando puntos a los equipos que construyan las tablas de verdad correctamente y otorgando puntos adicionales a los equipos que logren resolver argumentos más complejos.
+
+Esta dinámica no solo es una forma divertida y desafiante de enseñar a los estudiantes sobre tablas de verdad, sino que también fomenta el trabajo en equipo, la colaboración y la resolución de problemas.

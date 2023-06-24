@@ -1,0 +1,503 @@
+---
+title: "Taller de Videojuegos."
+subtitle: "POO (Programación Orientada a Objetos)."
+date: "today"
+author: "Lic. Diego Medardo Saavedra García Mg. Sc."
+lang: "es"
+format:
+  revealjs:
+    #chalkboard: 
+      #buttons: false
+    toc: true
+    incremental: false
+    slide-number: true
+    preview-links: auto
+    logo: img/logo.png
+    footer: <https://espe.edu.ec>
+    theme: dark
+    makeindex: true
+    multiplex: true
+    transition: fade
+    chalkboard: true #Pizarra
+    auto-stretch: false
+    smaller: false
+    scrollable: true
+    #presentation-title-slide-text-alig: left
+    presentation-slide-text-align: center
+    menu: true
+    codeBlock: {data-trim: true}
+    execute: true
+    executeCode: true
+  #html: 
+    
+    #code-fold: true
+    #html-math-method: katex
+    #multiplex: true
+    #transition: fade
+    #auto-stretch: false
+bibliography: Bibliografia.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Taller de Videojuegos.
+
+## **Unidad 1:** Introducción a la Programación Orientada a Objetos.
+
+En esta unidad, se introducirán los conceptos básicos de la Programación Orientada a Objetos (POO) y su importancia en el desarrollo de videojuegos con Python.
+
+### Conceptos básicos de la POO.
+
+La Programación Orientada a Objetos es un paradigma de programación que se basa en la creación y manipulación de objetos. Los objetos son entidades que representan elementos del mundo real o abstracto, y se caracterizan por sus atributos y comportamientos.
+
+En Python, los objetos son instancias de clases, que son estructuras que definen la forma y el comportamiento de los objetos. Las clases actúan como plantillas o moldes a partir de los cuales se crean los objetos.
+
+A continuación, se muestra un ejemplo de creación de una clase "Jugador" en Python:
+
+```{python}
+
+class Jugador:
+    def __init__(self, nombre, puntos):
+        self.nombre = nombre
+        self.puntos = puntos
+    
+    def obtener_nombre(self):
+        return self.nombre
+    
+    def incrementar_puntos(self, cantidad):
+        self.puntos += cantidad
+```
+
+En este ejemplo, la clase "Jugador" tiene dos atributos: "nombre" y "puntos". También tiene dos métodos: "obtener_nombre" y "incrementar_puntos". El método **init** es un método especial que se llama al crear una nueva instancia de la clase.
+
+**Práctica:** Implementación de una instancia de la clase "Jugador" y llamadas a sus métodos
+
+A continuación, se muestra cómo se puede crear una instancia de la clase "Jugador" y llamar a sus métodos:
+
+```{python}
+
+jugador1 = Jugador("Juan", 0)
+print(jugador1.obtener_nombre())  # Salida: Juan
+
+jugador1.incrementar_puntos(10)
+print(jugador1.puntos)  # Salida: 10
+```
+
+En este ejemplo, se crea una instancia de la clase "Jugador" llamada "jugador1" con el nombre "Juan" y 0 puntos. Luego se llama al método "obtener_nombre" para obtener el nombre del jugador y al método "incrementar_puntos" para incrementar los puntos en 10. Finalmente, se imprime el valor de los puntos, que ahora es 10.
+
+La Programación Orientada a Objetos proporciona una forma estructurada y modular de organizar el código, lo que facilita el desarrollo y mantenimiento de proyectos más grandes, como los videojuegos.
+
+En la siguiente diapositiva, se realizará una práctica para reforzar los conceptos aprendidos hasta ahora.
+
+**Práctica:** Implementación de una instancia de la clase "Jugador" y llamadas a sus métodos
+
+En esta práctica, se creará una instancia de la clase "Jugador" y se realizarán llamadas a sus métodos. Sigue las instrucciones a continuación:
+
+-   Crea una nueva instancia de la clase "Jugador" llamada "jugador2" con el nombre "María" y 5 puntos.
+-   Llama al método "obtener_nombre" de la instancia "jugador2" y muestra el resultado en la consola.
+-   Llama al método "incrementar_puntos" de la instancia "jugador2" y pasa un valor de 3 como argumento. Muestra el valor actual de los puntos de la instancia "jugador2" en la consola.
+
+Asegúrate de verificar los resultados y compararlos con las soluciones proporcionadas.
+
+¡Buena suerte!
+
+[Enlace al código de solución](Ejemplos\solucion1.py)
+
+Continúa con la siguiente unidad para aprender más sobre el desarrollo de videojuegos con Python y la Programación Orientada a Objetos.
+
+## **Unidad 2:** Desarrollo de Videojuegos con POO en Python
+
+### Estructura básica de un videojuego
+
+En esta unidad, se explorará la estructura básica de un videojuego desarrollado utilizando Programación Orientada a Objetos (POO) en Python.
+
+**Ejemplo:** Creación de una clase "Juego" con métodos para inicializar y ejecutar el juego
+
+A continuación, se muestra un ejemplo de cómo se puede crear una clase "Juego" que contenga los métodos necesarios para inicializar y ejecutar el juego:
+
+``` python
+class Juego:
+    def __init__(self):
+        # Inicialización del juego
+        
+    def iniciar(self):
+        # Lógica para iniciar el juego
+        
+    def ejecutar(self):
+        # Lógica para ejecutar el juego
+        
+    def finalizar(self):
+        # Lógica para finalizar el juego
+```
+
+En este ejemplo, la clase "Juego" tiene los métodos **init**, iniciar, ejecutar y finalizar. El método **init** se utiliza para inicializar el juego, mientras que los otros métodos contienen la lógica principal para iniciar, ejecutar y finalizar el juego, respectivamente.
+
+**Práctica:** Desarrollo de un juego sencillo utilizando la estructura básica
+
+En esta práctica, se te pedirá desarrollar un juego sencillo utilizando la estructura básica de la clase "Juego" presentada anteriormente. Sigue las instrucciones a continuación:
+
+-   Crea una nueva clase "MiJuego" que herede de la clase "Juego".
+-   Implementa los métodos iniciar, ejecutar y finalizar de la clase "MiJuego" con la lógica correspondiente.
+-   Crea una instancia de la clase "MiJuego".
+-   Llama al método iniciar de la instancia para comenzar el juego.
+-   Llama al método ejecutar para ejecutar el juego.
+-   Llama al método finalizar para finalizar el juego.
+
+Recuerda que puedes agregar cualquier funcionalidad adicional que desees a tu juego. ¡Diviértete desarrollándolo!
+
+Enlace al código de solución
+
+## Implementación de mecánicas de juego
+
+En el desarrollo de un videojuego, es importante implementar diversas mecánicas que le brinden interactividad y diversión al jugador. En esta sección, exploraremos cómo implementar mecánicas de juego utilizando POO en Python.
+
+**Ejemplo:** Creación de clases para enemigos, obstáculos y objetos recolectables
+
+Para ilustrar la implementación de mecánicas de juego, se crearán las siguientes clases: "Enemigo", "Obstáculo" y "ObjetoRecolectable".
+
+``` python
+class Enemigo:
+    def __init__(self):
+        # Inicialización del enemigo
+        
+    def mover(self):
+        # Lógica para mover al enemigo
+        
+class Obstáculo:
+    def __init__(self):
+        # Inicialización del obstáculo
+        
+    def colisionar(self):
+        # Lógica para manejar la colisión del obstáculo
+        
+class ObjetoRecolectable:
+    def __init__(self):
+        # Inicialización del objeto recolectable
+        
+    def recolectar(self):
+        # Lógica para recolectar el objeto
+```
+
+En este ejemplo, cada clase tiene un método **init** para la inicialización y métodos adicionales para implementar la lógica específica de cada elemento del juego. Por ejemplo, el enemigo tiene un método mover para definir cómo se mueve, el obstáculo tiene un método colisionar para manejar las colisiones y el objeto recolectable tiene un método recolectar para realizar la recolección.
+
+**Práctica:** Incorporación de mecánicas de juego al proyecto del videojuego
+
+En esta práctica, se te pedirá que incorpores las mecánicas de juego implementadas en el ejemplo anterior a tu proyecto del videojuego desarrollado en la práctica anterior. Sigue las instrucciones a continuación:
+
+-   Crea las clases necesarias para representar los enemigos, obstáculos y objetos recolectables en tu juego.
+-   Implementa la lógica correspondiente en los métodos de cada clase para que interactúen correctamente con el resto del juego.
+-   Prueba el funcionamiento de tu juego, asegurándote de que las mecánicas de juego se ejecuten correctamente.
+
+Recuerda que puedes personalizar las mecánicas de juego y agregar funcionalidades adicionales según los requisitos de tu juego.
+
+¡Sigue adelante y crea un emocionante videojuego con Python y POO!
+
+## **Unidad 3:** Desarrollo de Videojuegos con Pygame.
+
+En esta unidad, nos adentraremos en el desarrollo de videojuegos utilizando la biblioteca Pygame en Python. Pygame es una poderosa herramienta que nos permite crear juegos 2D de manera sencilla y eficiente.
+
+### Introducción a Pygame
+
+En esta sección, exploraremos los conceptos básicos de Pygame y entenderemos su importancia en el desarrollo de videojuegos.
+
+### ¿Qué es Pygame?
+
+Pygame es una biblioteca de Python que nos permite crear juegos 2D de manera fácil y rápida.
+
+Proporciona una interfaz para trabajar con gráficos, sonido, música y eventos del usuario.
+
+Es ampliamente utilizada en la industria del desarrollo de videojuegos.
+
+### Ventajas de utilizar Pygame en el desarrollo de videojuegos.
+
+Pygame ofrece una amplia gama de funcionalidades para el desarrollo de juegos, lo que facilita la implementación de diferentes aspectos del juego.
+
+Permite un rápido prototipado y desarrollo iterativo de los juegos.
+
+Es compatible con diferentes plataformas, lo que permite que los juegos se ejecuten en varios sistemas operativos.
+
+Cuenta con una comunidad activa que proporciona tutoriales, ejemplos y soporte.
+
+### Instalación de Pygame.
+
+Para instalar Pygame, se puede utilizar el administrador de paquetes pip en Python.
+
+Ejecuta el siguiente comando en tu terminal o línea de comandos:
+
+```{bash}
+pip install pygame
+```
+
+Una vez instalado, podrás importar y utilizar Pygame en tus proyectos de videojuegos.
+
+### Elementos básicos de Pygame
+
+En esta sección, aprenderemos los elementos básicos necesarios para iniciar el desarrollo de un videojuego con Pygame.
+
+### Creación de una ventana de juego.
+
+Pygame proporciona una función para crear una ventana de juego en la cual se mostrará nuestro juego.
+
+Utilizaremos la función pygame.display.set_mode() para especificar el tamaño de la ventana y otros parámetros.
+
+``` python
+import pygame
+
+# Inicializar Pygame
+pygame.init()
+
+# Crear una ventana de juego
+ventana = pygame.display.set_mode((800, 600))
+```
+
+### Carga y visualización de imágenes.
+
+Pygame permite cargar y mostrar imágenes en nuestro juego. Utilizaremos la función pygame.image.load() para cargar una imagen y la función ventana.blit() para mostrarla en la ventana de juego.
+
+``` python
+import pygame
+
+# Cargar una imagen
+imagen = pygame.image.load("imagen.png")
+
+# Mostrar la imagen en la ventana de juego
+ventana.blit(imagen, (x, y))
+```
+
+Captura de eventos del teclado y del ratón. Pygame nos permite capturar eventos del teclado y del ratón para realizar acciones en nuestro juego. Utilizaremos un bucle principal para escuchar y manejar los eventos.
+
+``` python
+import pygame
+
+# Bucle principal del juego
+while True:
+    for evento in pygame.event.get():
+        if evento.type == pygame.KEYDOWN:
+            if evento.key == pygame.K_SPACE:
+                # Acción al presionar la tecla espacio
+                pass
+
+        if evento.type == pygame.MOUSEBUTTONDOWN:
+            if evento.button == 1:
+                # Acción al hacer clic con el botón izquierdo del ratón
+                pass
+```
+
+### Actualización del juego en un bucle principal.
+
+Para que nuestro juego se mantenga actualizado, utilizaremos un bucle principal que se ejecutará continuamente.
+
+En cada iteración del bucle, actualizaremos el estado del juego y dibujaremos los elementos en la ventana.
+
+``` python
+import pygame
+
+# Bucle principal del juego
+while True:
+    # Actualizar el estado del juego
+    # ...
+
+    # Dibujar elementos en la ventana
+    # ...
+
+    # Actualizar la ventana
+    pygame.display.update()
+```
+
+### Sprites y animaciones
+
+En esta sección, aprenderemos sobre los sprites en los juegos y cómo animarlos utilizando Pygame.
+
+### Concepto de sprites en los juegos.
+
+Los sprites son objetos gráficos que representan a los personajes, enemigos, objetos y otros elementos visuales del juego.
+
+Pygame nos permite crear y manipular sprites para dar vida a nuestro juego.
+
+### Creación de sprites utilizando imágenes.
+
+Para crear un sprite en Pygame, primero cargamos una imagen y la asignamos a una variable.
+
+Luego, utilizamos la clase pygame.sprite.Sprite para crear un sprite a partir de la imagen cargada.
+
+``` python
+import pygame
+
+class MiSprite(pygame.sprite.Sprite):
+    def __init__(self, imagen):
+        super().__init__()
+        self.image = imagen
+        self.rect = self.image.get_rect()
+```
+
+### Animación de sprites.
+
+Para animar un sprite, podemos utilizar una secuencia de imágenes que se mostrarán en rápida sucesión.
+
+Utilizaremos una lista de imágenes y un temporizador para cambiar la imagen que se muestra en cada fotograma.
+
+``` python
+import pygame
+
+class MiSprite(pygame.sprite.Sprite):
+    def __init__(self, imagenes):
+        super().__init__()
+        self.imagenes = imagenes
+        self.indice = 0
+        self.image = self.imagenes[self.indice]
+        self.rect = self.image.get_rect()
+
+    def animar(self):
+        self.indice += 1
+        if self.indice >= len(self.imagenes):
+            self.indice = 0
+        self.image = self.imagenes[self.indice]
+```
+
+### Colisiones entre sprites.
+
+En los juegos, es común necesitar detectar colisiones entre sprites para manejar interacciones y eventos.
+
+Pygame proporciona métodos para detectar colisiones entre rectángulos que rodean los sprites.
+
+``` python
+import pygame
+
+sprite1 = pygame.sprite.Sprite()
+sprite1.rect = pygame.Rect(100, 100, 50, 50)
+
+sprite2 = pygame.sprite.Sprite()
+sprite2.rect = pygame.Rect(200, 200, 50, 50)
+
+if pygame.sprite.collide_rect(sprite1, sprite2):
+    # Acción al producirse una colisión entre los sprites
+    pass
+```
+
+### Sonido y música
+
+En esta sección, exploraremos cómo incorporar efectos de sonido y música de fondo en nuestros juegos con Pygame.
+
+### Incorporación de efectos de sonido.
+
+Pygame nos permite cargar y reproducir efectos de sonido en nuestro juego.
+
+Utilizaremos la función pygame.mixer.Sound() para cargar un efecto de sonido y el método play() para reproducirlo.
+
+``` python
+import pygame
+
+# Cargar un efecto de sonido
+efecto_sonido = pygame.mixer.Sound("sonido.wav")
+
+# Reproducir el efecto de sonido
+efecto_sonido.play()
+```
+
+### Reproducción de música de fondo.
+
+Pygame también nos permite cargar y reproducir música de fondo en nuestro juego.
+
+Utilizaremos la función pygame.mixer.music.load() para cargar una canción y el método pygame.mixer.music.play() para reproducirla.
+
+``` python
+import pygame
+
+# Cargar una canción
+pygame.mixer.music.load("cancion.mp3")
+
+# Reproducir la canción en bucle
+pygame.mixer.music.play(-1)
+```
+
+### Control de volumen y reproducción.
+
+Pygame nos brinda la capacidad de controlar el volumen de los efectos de sonido y la música de fondo.
+
+Utilizaremos las funciones pygame.mixer.Sound.set_volume() y pygame.mixer.music.set_volume() para ajustar el volumen.
+
+``` python
+import pygame
+
+# Ajustar el volumen de un efecto de sonido
+efecto_sonido.set_volume(0.5)
+
+# Ajustar el volumen de la música de fondo
+pygame.mixer.music.set_volume(0.3)
+```
+
+### Interfaz de usuario y menús
+
+En esta sección, aprenderemos a crear elementos interactivos y menús para mejorar la experiencia del usuario en nuestros juegos.
+
+### Creación de botones y elementos interactivos.
+
+Pygame nos permite crear botones y otros elementos interactivos utilizando imágenes y eventos del usuario.
+
+Utilizaremos rectángulos para definir las áreas interactivas y la detección de eventos del ratón para manejar las interacciones.
+
+``` python
+import pygame
+
+class Boton(pygame.sprite.Sprite):
+    def __init__(self, imagen_normal, imagen_clic):
+        super().__init__()
+        self.imagen_normal = imagen_normal
+        self.imagen_clic = imagen_clic
+        self.image = self.imagen_normal
+        self.rect = self.image.get_rect()
+
+    def manejar_evento(self, evento):
+        if evento.type == pygame.MOUSEBUTTONDOWN:
+            if self.rect.collidepoint(evento.pos):
+                self.image = self.imagen_clic
+        elif evento.type == pygame.MOUSEBUTTONUP:
+            self.image = self.imagen_normal
+```
+
+### Implementación de menús y pantallas de inicio.
+
+Pygame nos permite crear menús y pantallas de inicio para dar la bienvenida al jugador y permitir la navegación entre diferentes secciones del juego.
+
+Utilizaremos diferentes superficies y elementos gráficos para diseñar las pantallas de manera atractiva y fácil de usar.
+
+``` python
+import pygame
+
+# Pantalla de inicio
+def pantalla_inicio():
+    while True:
+        for evento in pygame.event.get():
+            if evento.type == pygame.KEYDOWN:
+                if evento.key == pygame.K_SPACE:
+                    # Iniciar el juego
+                    pass
+
+        # Dibujar elementos en la pantalla de inicio
+        # ...
+
+        pygame.display.update()
+
+# Juego principal
+def juego_principal():
+    while True:
+        for evento in pygame.event.get():
+            # Capturar eventos del juego principal
+            # ...
+
+        # Actualizar y dibujar elementos del juego principal
+        # ...
+
+        pygame.display.update()
+```
+
+# Práctica: Desarrollo de un juego completo con Pygame
+
+En esta práctica, pondremos en práctica los conocimientos adquiridos en esta unidad para desarrollar un juego completo utilizando Pygame. La idea es que puedas aplicar todos los elementos vistos, desde la creación de la ventana de juego, la carga de imágenes y sonidos, hasta la implementación de mecánicas de juego, colisiones y elementos interactivos.
+
+Recuerda que puedes dejar volar tu imaginación y desarrollar el tipo de juego que desees. ¡Diviértete explorando las posibilidades de Pygame!
+
+## Referencias.
+
+Documentación oficial de Pygame: https://www.pygame.org/docs/ Tutoriales y ejemplos de Pygame: https://www.pygame.org/wiki/tutorials Librería de sonidos y música para Pygame: https://www.pygame.org/docs/ref/music.html
