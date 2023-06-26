@@ -8,7 +8,7 @@ format:
   revealjs:
     #chalkboard: 
       #buttons: false
-    toc: true
+    #toc: false
     incremental: false
     slide-number: true
     preview-links: auto
@@ -22,20 +22,12 @@ format:
     auto-stretch: false
     smaller: false
     scrollable: true
-    #presentation-title-slide-text-alig: left
     presentation-slide-text-align: center
     menu: true
     codeBlock: {data-trim: true}
     execute: true
     executeCode: true
-  #html: 
-    
-    #code-fold: true
-    #html-math-method: katex
-    #multiplex: true
-    #transition: fade
-    #auto-stretch: false
-bibliography: Bibliografia.bib
+  
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
 editor_options: 
   chunk_output_type: console
