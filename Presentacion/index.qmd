@@ -193,13 +193,15 @@ Recuerda que puedes personalizar las mecánicas de juego y agregar funcionalidad
 
 ## **Unidad 3:** Desarrollo de Videojuegos con Pygame.
 
-En esta unidad, nos adentraremos en el desarrollo de videojuegos utilizando la biblioteca Pygame en Python. Pygame es una poderosa herramienta que nos permite crear juegos 2D de manera sencilla y eficiente.
+En esta unidad, nos adentraremos en el desarrollo de videojuegos utilizando la biblioteca Pygame en Python.
 
-### Introducción a Pygame
+Pygame es una poderosa herramienta que nos permite crear juegos 2D de manera sencilla y eficiente.
+
+## Introducción a Pygame
 
 En esta sección, exploraremos los conceptos básicos de Pygame y entenderemos su importancia en el desarrollo de videojuegos.
 
-### ¿Qué es Pygame?
+## ¿Qué es Pygame?
 
 Pygame es una biblioteca de Python que nos permite crear juegos 2D de manera fácil y rápida.
 
@@ -207,17 +209,17 @@ Proporciona una interfaz para trabajar con gráficos, sonido, música y eventos 
 
 Es ampliamente utilizada en la industria del desarrollo de videojuegos.
 
-### Ventajas de utilizar Pygame en el desarrollo de videojuegos.
+## Ventajas de utilizar Pygame en el desarrollo de videojuegos.
 
-Pygame ofrece una amplia gama de funcionalidades para el desarrollo de juegos, lo que facilita la implementación de diferentes aspectos del juego.
+-   Pygame ofrece una amplia gama de funcionalidades para el desarrollo de juegos, lo que facilita la implementación de diferentes aspectos del juego.
 
-Permite un rápido prototipado y desarrollo iterativo de los juegos.
+-   Permite un rápido prototipado y desarrollo iterativo de los juegos.
 
-Es compatible con diferentes plataformas, lo que permite que los juegos se ejecuten en varios sistemas operativos.
+-   Es compatible con diferentes plataformas, lo que permite que los juegos se ejecuten en varios sistemas operativos.
 
-Cuenta con una comunidad activa que proporciona tutoriales, ejemplos y soporte.
+-   Cuenta con una comunidad activa que proporciona tutoriales, ejemplos y soporte.
 
-### Instalación de Pygame.
+## Instalación de Pygame.
 
 Para instalar Pygame, se puede utilizar el administrador de paquetes pip en Python.
 
@@ -229,11 +231,11 @@ pip install pygame
 
 Una vez instalado, podrás importar y utilizar Pygame en tus proyectos de videojuegos.
 
-### Elementos básicos de Pygame
+## Elementos básicos de Pygame
 
 En esta sección, aprenderemos los elementos básicos necesarios para iniciar el desarrollo de un videojuego con Pygame.
 
-### Creación de una ventana de juego.
+## Creación de una ventana de juego.
 
 Pygame proporciona una función para crear una ventana de juego en la cual se mostrará nuestro juego.
 
@@ -245,22 +247,66 @@ import pygame
 # Inicializar Pygame
 pygame.init()
 
-# Crear una ventana de juego
-ventana = pygame.display.set_mode((800, 600))
+# Definir dimensiones de la ventana del juego
+ANCHO = 800
+ALTO = 600
+
+# Crear la ventana del juego
+ventana = pygame.display.set_mode((ANCHO, ALTO))
+pygame.display.set_caption("Mi Juego")
+
+# Bucle principal del juego
+while True:
+    for evento in pygame.event.get():
+        if evento.type == pygame.QUIT:
+            pygame.quit()
+            exit()
+
+    # Actualizar la pantalla
+    pygame.display.flip()
 ```
 
-### Carga y visualización de imágenes.
+## Carga y visualización de imágenes.
 
 Pygame permite cargar y mostrar imágenes en nuestro juego. Utilizaremos la función pygame.image.load() para cargar una imagen y la función ventana.blit() para mostrarla en la ventana de juego.
 
 ``` python
 import pygame
 
-# Cargar una imagen
-imagen = pygame.image.load("imagen.png")
+# Inicializar Pygame
+pygame.init()
 
-# Mostrar la imagen en la ventana de juego
-ventana.blit(imagen, (x, y))
+# Definir dimensiones de la ventana del juego
+ANCHO = 800
+ALTO = 600
+
+# Crear la ventana del juego
+ventana = pygame.display.set_mode((ANCHO, ALTO))
+pygame.display.set_caption("Mi Juego")
+
+# Cargar una imagen
+imagen = pygame.image.load("img/jugador.jpg")
+
+nuevo_ancho = 200  # Nuevo ancho deseado
+nuevo_alto = 200  # Nuevo alto deseado
+imagen_redimensionada = pygame.transform.scale(imagen, (nuevo_ancho, nuevo_alto))
+
+# Posición inicial de la imagen en la ventana
+x = 100
+y = 100
+
+# Bucle principal del juego
+while True:
+    for evento in pygame.event.get():
+        if evento.type == pygame.QUIT:
+            pygame.quit()
+            exit()
+
+    # Dibujar la imagen en la ventana de juego
+    ventana.blit(imagen_redimensionada, (x, y))
+
+    # Actualizar la pantalla
+    pygame.display.flip()
 ```
 
 Captura de eventos del teclado y del ratón. Pygame nos permite capturar eventos del teclado y del ratón para realizar acciones en nuestro juego. Utilizaremos un bucle principal para escuchar y manejar los eventos.
@@ -282,7 +328,7 @@ while True:
                 pass
 ```
 
-### Actualización del juego en un bucle principal.
+## Actualización del juego en un bucle principal.
 
 Para que nuestro juego se mantenga actualizado, utilizaremos un bucle principal que se ejecutará continuamente.
 
@@ -303,17 +349,17 @@ while True:
     pygame.display.update()
 ```
 
-### Sprites y animaciones
+## Sprites y animaciones
 
 En esta sección, aprenderemos sobre los sprites en los juegos y cómo animarlos utilizando Pygame.
 
-### Concepto de sprites en los juegos.
+## Concepto de sprites en los juegos.
 
 Los sprites son objetos gráficos que representan a los personajes, enemigos, objetos y otros elementos visuales del juego.
 
 Pygame nos permite crear y manipular sprites para dar vida a nuestro juego.
 
-### Creación de sprites utilizando imágenes.
+## Creación de sprites utilizando imágenes.
 
 Para crear un sprite en Pygame, primero cargamos una imagen y la asignamos a una variable.
 
@@ -329,7 +375,7 @@ class MiSprite(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
 ```
 
-### Animación de sprites.
+## Animación de sprites.
 
 Para animar un sprite, podemos utilizar una secuencia de imágenes que se mostrarán en rápida sucesión.
 
@@ -353,7 +399,7 @@ class MiSprite(pygame.sprite.Sprite):
         self.image = self.imagenes[self.indice]
 ```
 
-### Colisiones entre sprites.
+## Colisiones entre sprites.
 
 En los juegos, es común necesitar detectar colisiones entre sprites para manejar interacciones y eventos.
 
@@ -373,11 +419,11 @@ if pygame.sprite.collide_rect(sprite1, sprite2):
     pass
 ```
 
-### Sonido y música
+## Sonido y música
 
 En esta sección, exploraremos cómo incorporar efectos de sonido y música de fondo en nuestros juegos con Pygame.
 
-### Incorporación de efectos de sonido.
+## Incorporación de efectos de sonido.
 
 Pygame nos permite cargar y reproducir efectos de sonido en nuestro juego.
 
@@ -393,7 +439,7 @@ efecto_sonido = pygame.mixer.Sound("sonido.wav")
 efecto_sonido.play()
 ```
 
-### Reproducción de música de fondo.
+## Reproducción de música de fondo.
 
 Pygame también nos permite cargar y reproducir música de fondo en nuestro juego.
 
@@ -409,7 +455,7 @@ pygame.mixer.music.load("cancion.mp3")
 pygame.mixer.music.play(-1)
 ```
 
-### Control de volumen y reproducción.
+## Control de volumen y reproducción.
 
 Pygame nos brinda la capacidad de controlar el volumen de los efectos de sonido y la música de fondo.
 
@@ -425,11 +471,11 @@ efecto_sonido.set_volume(0.5)
 pygame.mixer.music.set_volume(0.3)
 ```
 
-### Interfaz de usuario y menús
+## Interfaz de usuario y menús
 
 En esta sección, aprenderemos a crear elementos interactivos y menús para mejorar la experiencia del usuario en nuestros juegos.
 
-### Creación de botones y elementos interactivos.
+## Creación de botones y elementos interactivos.
 
 Pygame nos permite crear botones y otros elementos interactivos utilizando imágenes y eventos del usuario.
 
@@ -454,7 +500,7 @@ class Boton(pygame.sprite.Sprite):
             self.image = self.imagen_normal
 ```
 
-### Implementación de menús y pantallas de inicio.
+## Implementación de menús y pantallas de inicio.
 
 Pygame nos permite crear menús y pantallas de inicio para dar la bienvenida al jugador y permitir la navegación entre diferentes secciones del juego.
 
