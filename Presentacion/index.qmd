@@ -8,7 +8,7 @@ format:
   revealjs:
     #chalkboard: 
       #buttons: false
-    #toc: false
+    toc: false
     incremental: false
     slide-number: true
     preview-links: auto
